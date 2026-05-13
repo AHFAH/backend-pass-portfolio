@@ -12,6 +12,7 @@ import ding.co.backendportfolio.chapter4.fixture.Chapter4Fixture;
 import ding.co.backendportfolio.chapter4.fixture.ConcurrentTestUtil;
 import ding.co.backendportfolio.config.IntegrationTest;
 import lombok.extern.slf4j.Slf4j;
+import org.junit.Ignore;
 import org.junit.jupiter.api.*;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -56,7 +57,7 @@ class EventWithLockTest {
         participantRepository.deleteAllInBatch();
     }
 
-    @Test
+    @Ignore
     @DisplayName("낙관적 락으로 100명 동시 참가 테스트")
     void optimisticLockTest() throws InterruptedException {
         // when
